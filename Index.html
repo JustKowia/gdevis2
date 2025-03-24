@@ -29,7 +29,35 @@
       color: #fff;
       line-height: 1.6;
       overflow-x: hidden;
+      scroll-behavior: smooth;
+      
+  
+
+
     }
+    #loader {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0a;
+  color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
 
     header {
       position: absolute;
@@ -42,11 +70,13 @@
     
     }
     header .logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-    }
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
     header .cta-btn {
+        
       background: transparent;
       border: 1px solid #fff;
       padding: 10px 20px;
@@ -56,6 +86,9 @@
       font-weight: 500;
     }
 
+    nav.nav-links{
+        margin-top: 10px;
+    }
     .hero {
   height: 100vh;
   display: flex;
@@ -604,17 +637,33 @@ text-align: end;
   </style>
 </head>
 <body>
+    <!-- 🔄 LOADER -->
+    <div id="loader">
+        <h1 style="font-size: 7rem;">GDEVIS</h1>
+        <div class="progress-bar" style="width: 600px; height: 10px; background: #333; border-radius: 5px; overflow: hidden; margin-top: 20px;">
+          <div class="progress-fill" style="height: 100%; width: 0; background: #f3ff45;"></div>
+        </div>
+        <p id="percent" style="margin-top: 10px;">0%</p>
+      </div>
+      
+  
+      
+    
+    <header>
+        <a href="index.html" class="logo">GDEVIS</a>
+        <nav class="nav-links">
+          <a href="about.html" class="cta-btn">À propos</a>
+          <a href="#" class="cta-btn">Se connecter</a>
+        </nav>
+      </header>
 
-<header>
-  <div class="logo">GDEVIS</div>
-  <a href="#" class="cta-btn">Se connecter</a>
-</header>
+
 
 <section class="hero">
   <div class="hero-glass"></div>
   <h1>LE GÉNÉRATEUR<br>DE DEVIS<br>POUR PROS</h1>
   <p>Débloquez votre potentiel digital avec GénérateurDevis. Nous proposons des solutions intuitives de génération de devis pour les pros, freelances et indépendants.</p>
-  <a href="#" class="btn">Commencer</a>
+  <a href="devis.html" class="btn">Commencer</a>
 </section>
 
 
@@ -632,7 +681,7 @@ text-align: end;
         <li>✔️ Idéal pour les freelances ou micro-entrepreneurs</li>
         <li>✔️ Sans engagement</li>
       </ul>
-      <a href="#" class="btn">Télécharger</a>
+      <a href="devis.html" class="btn">Télécharger</a>
     </div>
 
     <!-- Pro -->
@@ -964,10 +1013,56 @@ text-align: end;
       item.classList.add("active");
     });
   });
+  
+  
+ 
+  
+  const loader = document.getElementById("loader");
+  const fill = document.querySelector(".progress-fill");
+  const text = document.getElementById("percent");
+
+  // Vérifie si c'est la première visite
+  const alreadyVisited = localStorage.getItem("gdevis_visited");
+
+  if (!alreadyVisited) {
+    let percent = 0;
+
+    document.body.style.opacity = "0"; // cacher le body
+    loader.style.display = "flex"; // afficher le loader
+
+    const interval = setInterval(() => {
+      percent++;
+      fill.style.width = percent + "%";
+      text.textContent = percent + "%";
+
+      if (percent >= 100) {
+        clearInterval(interval);
+
+        loader.classList.add("fade-out");
+        document.body.style.opacity = "1";
+        localStorage.setItem("gdevis_visited", "true"); // ✅ Marque comme visité
+
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 700);
+      }
+    }, 30);
+  } else {
+    // Déjà visité : cacher directement le loader
+    loader.style.display = "none";
+    document.body.style.opacity = "1";
+  }
+
+
+
+
+
 
   
 </script>
 
+
+  
 
 
 

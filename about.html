@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Découvrez pourquoi GDEVIS a été créé : un générateur de devis simple, rapide et professionnel pour freelances, artisans et indépendants.">
+  <meta name="keywords" content="gdevis, outil devis en ligne, créer devis artisan, logiciel devis freelance, solution devis rapide, tva auto-entrepreneur, application devis pro">
+  <meta name="author" content="GDEVIS">
+  <meta property="og:title" content="À propos de GDEVIS – L’outil de devis pensé pour les pros">
+  <meta property="og:description" content="Un outil né pour simplifier la vie des freelances et artisans. GDEVIS, c’est le générateur de devis qui fait gagner du temps.">
+  <meta property="og:image" content="https://gdevis.netlify.app/assets/preview.jpg">
+  <meta property="og:url" content="https://gdevis.netlify.app/a-propos.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://gdevis.netlify.app/a-propos.html" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos de GDEVIS – L’outil de devis pensé pour les pros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; line-height: 1.6; scroll-behavior: smooth;}
+    
+
+    header {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      right: 40px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+    
+    }
+    
+    header .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+    header .cta-btn {
+      background: transparent;
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 500;
+    }
+
+    content {
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 160px 0px 100px;
+      text-align: center;
+    }
+
+    content h1 {
+      font-size: 2.8rem;
+      max-width: 800px;
+     
+      line-height: 1.3;
+    }
+
+    content p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btns {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: 1px solid #fff;
+      border-radius: 30px;
+      background: transparent;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .about-section {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 100px 40px 60px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1.5;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.about-text p {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.about-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 200px;
+}
+
+.about-stats div {
+  font-size: 1.2rem;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about-stats strong {
+  font-size: 2rem;
+  display: block;
+  color: #f3ff45;
+}
+
+.about-stats span {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.about-image {
+  margin-top: 60px;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+
+.why-gdevis {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 80px 40px;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.why-left {
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.why-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.why-left p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.why-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.why-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 280px;
+}
+
+.why-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.why-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.services-section {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 100px 40px;
+}
+
+.services-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.services-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.services-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.services-left p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.services-grid {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-block {
+  background: #111;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.service-block h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.service-block p {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.footer-clean {
+  background: #0a0a0a;
+  color: #fff;
+  margin-top: 100px;
+  padding: 60px 40px 0px 40px;
+ 
+  border-radius: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-left h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.footer-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-form input {
+  padding: 10px 15px;
+  border: 1px solid #444;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-form button {
+  background: #f3ff45;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.footer-links {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column h5 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-brand {
+  text-align: left;
+  margin-top: 60px;
+}
+
+.footer-brand h1 {
+  font-size: clamp(2rem, 12vw, 20.5rem);
+  font-weight: bold;
+  
+  letter-spacing: 6px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">GDEVIS</a>
+    <nav class="nav-links">
+      <a href="about.html" class="cta-btn">À propos</a>
+      <a href="#" class="cta-btn">Se connecter</a>
+    </nav>
+  </header>
+
+
+<content>
+  <h1>Le générateur de devis simple, rapide et professionnel</h1>
+  <p>GDEVIS vous permet de créer des devis pros en quelques clics. Idéal pour freelances, artisans, PME et indépendants.</p>
+  <div class="btns">
+    <a href="Index.html" class="btn">Commencer</a>
+    <a href="devis.html" class="btn">Découvrir l'outil</a>
+  </div>
+</content>
+
+<section class="about-section">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>Nous sommes une équipe de professionnels</h2>
+      <p>
+        GDEVIS est né pour simplifier la vie des freelances, artisans et indépendants. Fini les modèles Word ou Excel bancals. 
+        Nous avons conçu un générateur de devis rapide, professionnel, simple à utiliser et sans inscription.
+      </p>
+      <p>
+        Grâce à GDEVIS, vous créez des devis clairs, chiffrés, exportables en PDF en quelques clics, et vous impressionnez vos clients dès le premier échange.
+      </p>
+    </div>
+
+    <div class="about-stats">
+      <div><strong>100%</strong><span>Satisfaction client</span></div>
+      <div><strong>50+</strong><span>Utilisateurs actifs</span></div>
+      <div><strong>98%</strong><span>Devis envoyés sous 1h</span></div>
+      <div><strong>24/7</strong><span>Support réactif</span></div>
+    </div>
+  </div>
+
+  
+</section>
+
+
+<section class="why-gdevis">
+  <div class="why-container">
+    <div class="why-left">
+      <h2>Pourquoi choisir GDEVIS à chaque étape</h2>
+      <p>
+        Nous mettons l’accent sur la simplicité, l’efficacité et le résultat concret. 
+        Notre approche est réaliste, humaine, et pensée pour répondre à votre budget et vos attentes.
+      </p>
+      <div class="why-image">
+        <img src="0_1-5.png" alt="Collaboration GDEVIS" />
+      </div>
+    </div>
+
+    <div class="why-right">
+      <div class="why-card">
+        <h3>🎯 Professionnalisme</h3>
+        <p>GDEVIS vous permet d’envoyer des devis impeccables, clairs, et crédibles en quelques clics.</p>
+      </div>
+      <div class="why-card">
+        <h3>💰 Stabilité des prix</h3>
+        <p>Aucun abonnement. Un prix unique. Pas de frais cachés.</p>
+      </div>
+      <div class="why-card">
+        <h3>✅ Qualité</h3>
+        <p>PDFs professionnels, calculs automatiques, et personnalisation facile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="services-section">
+  <div class="services-content">
+    <div class="services-left">
+      <h2>Ce que permet GDEVIS</h2>
+      <p>
+        GDEVIS vous permet de gérer toute la partie devis de votre activité : depuis la création jusqu’à l’envoi PDF, avec un rendu professionnel, rapide et sans prise de tête.
+      </p>
+      <a href="devis.html" class="cta-btn">Commencer</a>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-block">
+        <h3>🧊 Gestion client simple</h3>
+        <p>Saisissez vos prestations et coordonnées client en quelques clics, le reste est automatisé.</p>
+      </div>
+      <div class="service-block">
+        <h3>💡 Calculs automatiques</h3>
+        <p>Totaux, TVA, HT/TTC gérés en temps réel. Aucun risque d’erreur dans vos montants.</p>
+      </div>
+      <div class="service-block">
+        <h3>🔧 Personnalisation</h3>
+        <p>Ajoutez votre logo, couleurs, mentions légales ou signature pour un rendu pro à votre image.</p>
+      </div>
+      <div class="service-block">
+        <h3>📄 Export PDF</h3>
+        <p>Générez un fichier PDF propre, structuré, prêt à être envoyé par mail ou imprimé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer-clean">
+  <div class="footer-content">
+    <!-- Bloc gauche -->
+    <div class="footer-left">
+      <h4>Rejoignez GDEVIS</h4>
+      <form class="footer-form">
+        <input type="email" placeholder="votre@email.com" />
+        <button type="submit">S’inscrire gratuitement</button>
+      </form>
+    </div>
+
+    <!-- Bloc droit -->
+    <div class="footer-links">
+      <div class="footer-column">
+        <h5>Fonctionnalités</h5>
+        <ul>
+          <li><a href="devis.html">Créer un devis</a></li>
+          <li><a href="devis.html">Calcul automatique</a></li>
+          <li><a href="devis.html">Export PDF</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="devis.html">Freelances</a></li>
+          <li><a href="devis.html">Artisans</a></li>
+          <li><a href="devis.html">PME</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h5>Entreprise</h5>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grand texte en bas -->
+  <div class="footer-brand">
+    <h1>GDEVIS</h1>
+  </div>
+  <div class="bottom-footer">&copy; 2025 GDevis – Tous droits réservés</div>
+</footer>
+
+</body>
+</html>
